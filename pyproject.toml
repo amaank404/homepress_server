@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "homepress-server"
+version = "0.1.0"
+description = "Homepress Server API"
+authors = ["Amaan Ahmad Khan <71920621+amaank404@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/amaank404/homepress_server"
+packages = [{include = "homepress_server"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Flask = "^3.0.3"
+homepress = "^2.0.0"
+sqlalchemy = "^2.0.36"
+werkzeug = "^3.0.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+homepress-server = "homepress_server:run_server"
